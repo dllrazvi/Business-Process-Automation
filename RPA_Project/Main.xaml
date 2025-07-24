@@ -1,0 +1,508 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1759.3333333333333,7812" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System.Text.RegularExpressions" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Triggers</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="892.8,8091.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="NoDeskJobsData" />
+      <Variable x:TypeArguments="sd:DataTable" Name="CareerJetJobsData" />
+      <Variable x:TypeArguments="sd:DataTable" Name="HipoJobsData" />
+      <Variable x:TypeArguments="x:String" Name="HipoString" />
+      <Variable x:TypeArguments="x:String" Name="CareerJetString" />
+      <Variable x:TypeArguments="x:String" Name="NoDeskString" />
+      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="HipoExtracted" />
+      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="CareerJetExtracted" />
+      <Variable x:TypeArguments="sd:DataTable" Name="HipoExcelTable" />
+      <Variable x:TypeArguments="sd:DataTable" Name="CareerJetExcelTable" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Remote Jobs - NoDesk" sap:VirtualizedContainerService.HintSize="626,746.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="4b895ddf-8fb5-4c05-ac2a-82bb250e8202" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,496.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into Search" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="4b895ddf-8fb5-4c05-ac2a-82bb250e8202" Text="Software engineer" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://nodesk.co/remote-jobs/" DesignTimeRectangle="480, 227, 464, 52" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='search' class='ais-SearchBox-input' aaname='' /&gt;" Guid="6daca660-9eab-473f-8ed0-bafd3fe1b407" InformativeScreenshot="c36e140258e426d9089cba8b0b00a617.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Remote Jobs - NoDesk' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="739, 319, 84, 26" ElementType="Text" FriendlyName="'Engineering'" FullSelectorArgument="&lt;webctrl aaname='Engineering' idx='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Engineering' type='' tag='SPAN' class='dn-m db-l' check:innerText='Engineering' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[NoDeskJobsData]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Jobs' ReferenceName='Column0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="416,182.4" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="4b895ddf-8fb5-4c05-ac2a-82bb250e8202" Version="V3">
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="448, 298, 744, 1495" DesignTimeScaleFactor="1" FriendlyName="'Senior Backend'" FullSelectorArgument="&lt;webctrl tag='OL' /&gt;" Guid="f4e37c95-dbfe-4c2c-b862-674547fbc269" InformativeScreenshot="6b14ad962b01ee3e20b782592b87b224.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Remote Jobs - NoDesk' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-1928, -8, 1936, 1048" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAFFSURBVDhPY/BJ3vafEjwIDfBO2vrfMwGIE7ciiW0Di4HkkNWCMIoBIIVZtYf+T5x/6X/7tHP/Q7J2/vcCaoor2vu/b87F/+lVB8FqkPWgGACyZfbya/9B4Nfvv/97Zl/47x6/5X91z8n/v379/T9pwWWwGmQ9mAasuPb/z99//3/8/PP/xt33/yPzdv+v6ibRgE+ff/3fdfgx2BUzl139X9l1gjQDvn77/b9+wun/1++8///4+RdwmHz/8ef/ZGINACnObzryv3PGebBXLt98S7oBhc1H/wdl7Ph/+tIrcKCCAGEvAON+yqLL/5+/+vo/r/EIOAZq+079f/nm2/8Pn36CYwU5fYAwigEgHAEMdVB8g2wHxbl/6vb/KRUH/mfUHPwfnrMLRS0IYxgA0gRKPMhiIL4X0Gb0RATCGAaQiik0YNt/AKnQm1IEH1MfAAAAAElFTkSuQmCC" InformativeScreenshot="80d01d480e509d8ee5c5f4c4d2c0c3e3.jpg" Selector="&lt;html app='chrome.exe' title='Remote Jobs - NoDesk' /&gt;" Title="Remote Jobs - NoDesk" Url="https://nodesk.co/remote-jobs/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Peste 5000 de Locuri de munca si Joburi pentru profesionisti, programe de intern" sap:VirtualizedContainerService.HintSize="626,1949.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="ef758451-6c33-4993-8708-4641247ecde9" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1699.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into Search" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="ef758451-6c33-4993-8708-4641247ecde9" Text="Software Engineer" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.hipo.ro/" DesignTimeRectangle="475, 392, 217, 50" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl name='cuvintecheie' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='cuvintecheie' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="59a7d097-787d-4e25-bed7-f810af801202" InformativeScreenshot="85edbe1eb1fecb3f283d4fe796833f5f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Peste 5000 de Locuri de munca si Joburi pentru profesionisti, programe de internship pentru studenti si absolventi, targul de cariera Angajatori de TOP.' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="460, 377, 680, 80" FriendlyName="'Toate DomeniileAchiziti…'" FullSelectorArgument="&lt;webctrl class='row' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='row' tag='DIV' type='' aaname='                                                                                                                                             ' check:innerText='Toate Domeniile&amp;#xD;&amp;#xA;Achizitii-Logistica-Aprovizionare&amp;#xD;&amp;#xA;Administratie-Stiinte-politice&amp;#xD;&amp;#xA;Agricultura&amp;#xD;&amp;#xA;Altele' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Toate DomeniileAchiziti…'" sap:VirtualizedContainerService.HintSize="416,190" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ef758451-6c33-4993-8708-4641247ecde9" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.hipo.ro/" DesignTimeRectangle="864, 392, 153, 50" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'Toate Orasele'" FullSelectorArgument="&lt;webctrl id='controls[select][orases][value]' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='controls[select][orases][value]' tag='SELECT' type='' class='' aaname='' /&gt;" Guid="6014d316-61a3-40a2-9772-1b520a38398b" InformativeScreenshot="22db8098a6d0ae6b9ea55561926bf294.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Peste 5000 de Locuri de munca si Joburi pentru profesionisti, programe de internship pentru studenti si absolventi, targul de cariera Angajatori de TOP.' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="460, 377, 680, 80" FriendlyName="'Toate DomeniileAchiziti…'" FullSelectorArgument="&lt;webctrl class='row' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='row' tag='DIV' type='' aaname='                                                                                                                                             ' check:innerText='Toate Domeniile&amp;#xD;&amp;#xA;Achizitii-Logistica-Aprovizionare&amp;#xD;&amp;#xA;Administratie-Stiinte-politice&amp;#xD;&amp;#xA;Agricultura&amp;#xD;&amp;#xA;Altele' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Cauta'" sap:VirtualizedContainerService.HintSize="416,190" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ef758451-6c33-4993-8708-4641247ecde9" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.hipo.ro/" DesignTimeRectangle="1026, 392, 99, 50" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Cauta'" FullSelectorArgument="&lt;webctrl aaname='Cauta' tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Cauta' tag='INPUT' type='submit' class='button button-pink' check:text='Cauta' /&gt;" Guid="fec2ee44-7fcd-4f39-8df3-a0aff6e19a28" InformativeScreenshot="68afb9b8bba58dce9be318f1983fbf75.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Peste 5000 de Locuri de munca si Joburi pentru profesionisti, programe de internship pentru studenti si absolventi, targul de cariera Angajatori de TOP.' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="460, 377, 680, 80" FriendlyName="'Toate DomeniileAchiziti…'" FullSelectorArgument="&lt;webctrl class='row' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='row' tag='DIV' type='' aaname='                                                                                                                                             ' check:innerText='Toate Domeniile&amp;#xD;&amp;#xA;Achizitii-Logistica-Aprovizionare&amp;#xD;&amp;#xA;Administratie-Stiinte-politice&amp;#xD;&amp;#xA;Agricultura&amp;#xD;&amp;#xA;Altele' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Toate Orasele'" sap:VirtualizedContainerService.HintSize="416,190" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ef758451-6c33-4993-8708-4641247ecde9" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.hipo.ro/locuri-de-munca/cautajob" DesignTimeRectangle="805, 397, 176, 40" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Toate Orasele'" FullSelectorArgument="&lt;webctrl id='citiesbotton' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='citiesbotton' tag='BUTTON' type='button' class='multiselect dropdown-toggle custom-select text-left' aaname='Toate Orasele' check:innerText='Toate Orasele' /&gt;" Guid="3e97001f-2c30-4f4b-936d-ec54f30148b9" InformativeScreenshot="aa637c32d753c381bf9b3a4b489fe775.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Locuri de munca in Romania pentru studenti, absolventi si tineri profesionisti, Angajatori de top.' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="811, 409, 100, 17" ElementType="Text" FriendlyName="'Toate Orasele'" FullSelectorArgument="&lt;webctrl parentid='citiesbotton' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='citiesbotton' tag='SPAN' type='' class='multiselect-selected-text' aaname='Toate Orasele' check:innerText='Toate Orasele' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into Cauta Oras" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="ef758451-6c33-4993-8708-4641247ecde9" Text="Cluj-Napoca" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.hipo.ro/locuri-de-munca/cautajob/Toate-Domeniile/Toate-Orasele/software-engineer/" DesignTimeRectangle="837, 438, 227, 40" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT cities-FilterInpu…'" FullSelectorArgument="&lt;webctrl id='cities-FilterInputSearch' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='cities-FilterInputSearch' tag='INPUT' type='text' class='form-control multiselect-search rounded-0 shadow-none' aaname='' /&gt;" Guid="049beb23-a5d2-4aa2-a5a4-ff8e7f577b26" InformativeScreenshot="990eff46cd5ae4b15d5c7c658d8d85b5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='640 Locuri de munca software engineer - Hipo.ro' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="394, 382, 792, 71" FriendlyName="'software engineer'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='DIV' class='row formularcautanew' aaname='                                         ' check:innerText='Toate Domeniile&amp;#xD;&amp;#xA;Achizitii-Logistica-Aprovizionare&amp;#xD;&amp;#xA;Administratie-Stiinte-politice&amp;#xD;&amp;#xA;Agricultura&amp;#xD;&amp;#xA;Altele' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Cluj-Napoca (117)'" sap:VirtualizedContainerService.HintSize="416,190" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ef758451-6c33-4993-8708-4641247ecde9" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.hipo.ro/locuri-de-munca/cautajob/Toate-Domeniile/Toate-Orasele/software-engineer/" DesignTimeRectangle="818, 482, 18, 18" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl idx='6' name='oraseselectate[]' tag='INPUT' type='checkbox' /&gt;" FuzzySelectorArgument="&lt;webctrl class='form-check-input' name='oraseselectate[]' tag='INPUT' type='checkbox' aaname='' /&gt;" Guid="0b981d37-62ac-401f-9aa3-1044098269ed" InformativeScreenshot="90010985bba26c7d0a8868d6760ff536.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='640 Locuri de munca software engineer - Hipo.ro' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="843, 482, 125, 18" ElementType="Text" FriendlyName="'Cluj-Napoca (117)'" FullSelectorArgument="&lt;webctrl aaname='Cluj-Napoca ' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Cluj-Napoca ' tag='LABEL' type='' class='form-check-label' check:innerText='Cluj-Napoca (117)' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Cauta'" sap:VirtualizedContainerService.HintSize="416,190" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ef758451-6c33-4993-8708-4641247ecde9" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.hipo.ro/locuri-de-munca/cautajob" DesignTimeRectangle="995, 397, 112, 40" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Cauta'" FullSelectorArgument="&lt;webctrl aaname='Cauta' tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Cauta' tag='INPUT' type='submit' class='button button-pink rounded-0' check:text='Cauta' /&gt;" Guid="0cb334c9-f4f6-4c3f-b72f-5bf9b57c42cc" InformativeScreenshot="bbfa4d69fbf05e7d688a3e4eb34255c4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Locuri de munca in Romania pentru studenti, absolventi si tineri profesionisti, Angajatori de top.' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="394, 382, 792, 71" FriendlyName="'\nToate DomeniileAchizi…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='DIV' class='row formularcautanew' aaname='                                         ' check:innerText='Toate Domeniile&amp;#xD;&amp;#xA;Achizitii-Logistica-Aprovizionare&amp;#xD;&amp;#xA;Administratie-Stiinte-politice&amp;#xD;&amp;#xA;Agricultura&amp;#xD;&amp;#xA;Altele' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[HipoJobsData]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='JobsHipo' ReferenceName='Column0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="416,182.4" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="ef758451-6c33-4993-8708-4641247ecde9" Version="V3">
+              <uix:NExtractData.NextLink>
+                <uix:TargetAnchorable BrowserURL="https://www.hipo.ro/locuri-de-munca/cautajob/Toate-Domeniile/Cluj-Napoca/software-engineer/" DesignTimeRectangle="807, 699, 34, 44" DesignTimeScaleFactor="1" FriendlyName="'A'" FullSelectorArgument="&lt;webctrl aaname=' ' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' ' tag='A' type='' class='page page-next' /&gt;" Guid="1886b778-a801-4afe-8fc4-d4bddc8ee847" ScopeSelectorArgument="&lt;html app='chrome.exe' title='42 Locuri de munca software engineer din Cluj-Napoca; - Hipo.ro' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NExtractData.NextLink>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="390, -7675, 1140, 8607" DesignTimeScaleFactor="1" FriendlyName="'software engineer'" FullSelectorArgument="&lt;webctrl class='row' tag='DIV' /&gt;" Guid="660fc0d4-31f9-48a0-b9b5-e111346de72f" InformativeScreenshot="16cdb062b6249f98aba4d65154177e94.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='42 Locuri de munca software engineer din Cluj-Napoca; - Hipo.ro' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-1928, -8, 1936, 1048" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAHRSURBVDhPvZE9aBRBFMcfd7m92b11/UiQy97KVRaGQFIEtLMMYhMQ5FTsBBGCSM6Tu718SKLiRxMEsbIKxM4y2CQphFQBIViksNDCws4cJvexM/v37d1roqgJiD94xcy8339mePTfOB58rJQGXl6W5SEJzKKX38Zrb2pJdg6Ij37yzQqdAo6qx9hyKp9Ac5ac/gUfo1Qw21QE6MQqjmRux1+9+0BfeE46/kAel1huUMByoQnKzONkpqK19xBQ4Zx0/QYfdSokIlcS0L8eE03itBXGcOfRcmob0vkTRSj+71JX8qWCNsh6AKIpDDlhpL0ZNO2wtWvfC8QS8hgjX3/YL3MNvOveTlTFeatqYjcEcgv47lSviykM4hr/+TMdY8njGkwCOqDso+7tScC4O62NW497AbVlMfeTnjSLqYkkxMTUt8biDa4yVwVX7DCCW4dxZtFwal94nEq0HhZaZxQ632wA1opG6sLbiNIvDNEzDpiJ7zjT/HweY44nkXvCrwjHRe1hNTBkR+ZpthltKkRIgrJbQPqqQaq0E4+8ef8cVvninqrfNbmFV3uqVhL1VzLt9rDq6LIyek2ZaDcJI+CWHB8OBRRt6Jv2TuesbP1LiH4AZpPx5b7aKRUAAAAASUVORK5CYII=" InformativeScreenshot="94da22f2a0bee3b57cfb5381c6a6fbb8.jpg" Selector="&lt;html app='chrome.exe' title='Peste 5000 de Locuri de munca si Joburi pentru profesionisti, programe de internship pentru studenti si absolventi, targul de cariera Angajatori de TOP.' /&gt;" Title="Bestjobs: Find your tribe, mii de locuri de muncă active, începe cu interviul | Bestjobs.eu" Url="https://www.hipo.ro/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Careerjet.ro - Joburi, angajări, locuri de muncă în România" sap:VirtualizedContainerService.HintSize="626,1419.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="b9ef94bf-0fdb-4e9e-872b-123cc312fcca" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1200" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Ce'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="b9ef94bf-0fdb-4e9e-872b-123cc312fcca" Text="Software Engineer" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.careerjet.ro/" DesignTimeRectangle="380, 314, 486, 74" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT s'" FullSelectorArgument="&lt;webctrl id='s' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='s' tag='INPUT' type='search' class='fc aci' aaname='                  Ce       ' /&gt;" Guid="912e49ee-bb9d-4700-a5f5-eb679edac54d" InformativeScreenshot="df647c9a3de0266496c336a844f70986.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Careerjet.ro - Joburi, angajări, locuri de muncă în România' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="389, 272, 49, 32" ElementType="Text" FriendlyName="'Ce'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='                  Ce       ' check:innerText='Ce' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Caută'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b9ef94bf-0fdb-4e9e-872b-123cc312fcca" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.careerjet.ro/" DesignTimeRectangle="1361, 324, 174, 54" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Caută'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='btn btn-primary btn-l' aaname='         Caută       ' check:innerText='Caută' /&gt;" Guid="d8b5b407-1874-4f58-8655-3bf344618d9d" InformativeScreenshot="736d79da561b8890fc0e5752bd51aed3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Careerjet.ro - Joburi, angajări, locuri de muncă în România' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="875, 272, 73, 32" ElementType="Text" FriendlyName="'Unde'" FullSelectorArgument="&lt;webctrl aaname='                  Unde       ' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                  Unde       ' tag='LABEL' type='' class='' check:innerText='Unde' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Unde'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="b9ef94bf-0fdb-4e9e-872b-123cc312fcca" Text="Cluj" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.careerjet.ro/locuri-de-munca?s=Software+Engineer&amp;l=cluj" DesignTimeRectangle="379, 367, 336, 48" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT l'" FullSelectorArgument="&lt;webctrl id='l' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='l' tag='INPUT' type='text' class='fc aci' aaname='              Unde     ' /&gt;" Guid="1c0a532f-73fd-433d-b882-4883516c060d" InformativeScreenshot="2cc1eabd352b27fe1f0bb302329e2d18.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Locuri de munca Software Engineer - Cluj | Careerjet' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="379, 335, 336, 32" ElementType="Text" FriendlyName="'Unde'" FullSelectorArgument="&lt;webctrl parentid='search-where' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='search-where' tag='LABEL' type='' class='hide-s hide-xs' aaname='              Unde     ' check:innerText='Unde' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Search" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b9ef94bf-0fdb-4e9e-872b-123cc312fcca" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.careerjet.ro/locuri-de-munca?s=Software+Engineer&amp;l=cluj" DesignTimeRectangle="682, 383, 18, 16" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl parentid='ac-l' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ac-l' tag='svg' type='' class='icon' aaname='' /&gt;" Guid="8a07f57e-8c77-4f3e-9042-a537b08ceb8d" InformativeScreenshot="ed03070132e055c081d95f9523d32eb9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Locuri de munca Software Engineer - Cluj | Careerjet' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="379, 335, 336, 32" ElementType="Text" FriendlyName="'Unde'" FullSelectorArgument="&lt;webctrl parentid='search-where' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='search-where' tag='LABEL' type='' class='hide-s hide-xs' aaname='              Unde     ' check:innerText='Unde' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[CareerJetJobsData]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='JobsCareerjet' ReferenceName='Column0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="388,160" sap2010:WorkflowViewState.IdRef="NExtractData_3" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="b9ef94bf-0fdb-4e9e-872b-123cc312fcca" Version="V3">
+              <uix:NExtractData.NextLink>
+                <uix:TargetAnchorable BrowserURL="https://www.careerjet.ro/locuri-de-munca?s=software+engineer&amp;l=Cluj" DesignTimeRectangle="1046, 290, 233, 48" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Pagina următoare'" FullSelectorArgument="&lt;webctrl aaname='           Pagina următoare                    ' parentid='search-content' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='           Pagina următoare                    ' parentid='search-content' tag='BUTTON' type='button' class='ves-control ves-add btn btn-r btn-primary-inverted next' check:innerText='Pagina următoare' /&gt;" Guid="b4463fa9-fe6b-433f-8e8c-402798d7e3be" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Locuri de munca Software Engineer - Cluj | Careerjet' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NExtractData.NextLink>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="779, 317, 768, 5433" DesignTimeScaleFactor="1" ElementType="List" FriendlyName="'UL'" FullSelectorArgument="&lt;webctrl class='jobs' parentid='search-content' tag='UL' /&gt;" Guid="64a4455c-530c-46db-8ac5-c9bab9651670" InformativeScreenshot="e57f0c64cd45f83f6c989db8d0f997ae.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Locuri de munca Software Engineer - Cluj | Careerjet' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-1928, -8, 1936, 1048" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAFkSURBVDhPndNLKERRHMdxzDQyhMnOYrqyUTOLiYVCSZJiZ2mlaWzs7CxY2NjIRomSpMaGxSXJY4mURyHGhoUk5ZFnyjO+/9v/5DY1XTn16c75n3+/O+d0blb6sOJ2LWxsYF2fC2jQlsyDpgDmcI9VLGMFt/oMauvvoJiPCGKQtx9hB3WoRg3WcIp6SF8UBSZgCjd4Up/4wKOLzL9geu4wgqAEyMI2+lSvMvP0mjw3cYEKCfjGqPN3/jjoH8QVIv8NaMUQQp4BrGWjEv0YRzfCuuw0eAW0Qfb7gku8Q84sahoyBlAvxSFSaEIYnXhAEgGvgGa8oktLUvNhGmco8wpowRsSWpKanMkkzlFuAiZQiCKXXFg4wRaqEIKcyTXk+8iTALlVctf31D4OMIMSdEB65LYe4xny0l3EJKAds1h0WcIwipGDRoxhHgPogQSmzL78kC/Rzecs6mAue/frbznIhBW3kz8oIzR+gQ2SegAAAABJRU5ErkJggg==" InformativeScreenshot="fc2b9c1ad399555158e59e1f6caad474.jpg" Selector="&lt;html app='chrome.exe' title='Careerjet.ro - Joburi, angajări, locuri de muncă în România' /&gt;" Title="Locuri de munca Software Engineer - Cluj | Careerjet" Url="https://www.careerjet.ro/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:OutputDataTable DataTable="[NoDeskJobsData]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="626,82" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[NoDeskString]" />
+    <ui:OutputDataTable DataTable="[CareerJetJobsData]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="626,82" sap2010:WorkflowViewState.IdRef="OutputDataTable_2" Text="[CareerJetString]" />
+    <ui:OutputDataTable DataTable="[HipoJobsData]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="626,82" sap2010:WorkflowViewState.IdRef="OutputDataTable_3" Text="[HipoString]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="626,86.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[HipoString]" />
+    <ui:Matches FirstMatch="{x:Null}" BuilderPattern="(\d{2}-\d{2}-\d{4})(?:\n(.+)\n(.+))" DisplayName="Find Matching Patterns" sap:VirtualizedContainerService.HintSize="626,60" sap2010:WorkflowViewState.IdRef="Matches_2" Input="[HipoString]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(\\d{2}-\\d{2}-\\d{4})(?:\\n(.+)\\n(.+))&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(\d{2}-\d{2}-\d{4})(?:\n(.+)\n(.+))" RegexOption="IgnoreCase, Compiled" Result="[HipoExtracted]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="626,86.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[NoDeskString]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="626,86.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[CareerJetString]" />
+    <ui:Matches FirstMatch="{x:Null}" BuilderPattern="(?m)^\s*\n(.+)\n(.+)" DisplayName="Find Matching Patterns" sap:VirtualizedContainerService.HintSize="626,60" sap2010:WorkflowViewState.IdRef="Matches_3" Input="[CareerJetString]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?m)^\\s*\\n(.+)\\n(.+)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?m)^\s*\n(.+)\n(.+)" RegexOption="IgnoreCase, Compiled" Result="[CareerJetExtracted]" />
+    <ui:BuildDataTable DataTable="[HipoExcelTable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="626,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Job_x0020_Location&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Company&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName /&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:ForEach x:TypeArguments="str:Match" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="626,844.6666666666666" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[HipoExtracted]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="str:Match">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="str:Match" Name="currentItem" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,654.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_9">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="jobDate" />
+              <Variable x:TypeArguments="x:String" Name="jobLocation" />
+              <Variable x:TypeArguments="x:String" Name="companyName" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[jobDate]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[currentItem.Groups(1).Value]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[jobLocation]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[currentItem.Groups(2).Value]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[companyName]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[currentItem.Groups(3).Value]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{jobDate, jobLocation, companyName}]" DataTable="[HipoExcelTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="434,191.33333333333334" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="626,754" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,666.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="530,556" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="HipoJobs.xlsx">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,275.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;Sheet1&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="434,164.66666666666666" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="False" Source="[HipoExcelTable]" />
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+    </ueab:ExcelProcessScopeX>
+    <ui:BuildDataTable DataTable="[CareerJetExcelTable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="626,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Company_x0020_Name&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Job_x0020_Location&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName /&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:ForEach x:TypeArguments="str:Match" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="626,711.6" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[CareerJetExtracted]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="str:Match">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="str:Match" Name="currentItem" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,529.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="jobLocation" />
+              <Variable x:TypeArguments="x:String" Name="companyName" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[companyName]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[currentItem.Groups(1).Value]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_5">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[jobLocation]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[currentItem.Groups(2).Value]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{companyName, jobLocation}]" DataTable="[CareerJetExcelTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="434,191.33333333333334" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="626,726.8" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="536,608" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="502,548" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="CareerJetJobs.xlsx">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,246.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;Sheet1&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="434,186.8" sap2010:WorkflowViewState.IdRef="WriteRangeX_2" IgnoreEmptySource="False" Source="[CareerJetExcelTable]" />
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+    </ueab:ExcelProcessScopeX>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="HighlightDeadlinesWorkflow.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="626,137.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="HighlightDeadlinesWorkflow.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+  </Sequence>
+</Activity>

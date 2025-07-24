@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1759.3333333333333,7812" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation/2010" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System.Text.RegularExpressions" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="688,8763.333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <ui:ExcelApplicationScope DisplayName="Open NoDeskJobs.xlsx" WorkbookPath="NoDeskJobs.xlsx">
+      <ui:ExcelApplicationScope.Body>
+        <Sequence DisplayName="Highlight Deadlines">
+          <ui:ReadRange DisplayName="Read Job Data" SheetName="Sheet1" DataTable="out_dtJobData" />
+          <ui:ForEachRow DisplayName="For Each Row in DataTable" DataTable="out_dtJobData">
+            <ui:If DisplayName="Check Deadline Condition" Condition="DateTime.Parse(CurrentRow[&quot;Application Deadline&quot;].ToString()).Subtract(DateTime.Now).Days &lt;= 3">
+              <ui:If.Then>
+                <ui:SetRangeColor DisplayName="Highlight Row in Red" Range="&quot;A&quot; + (out_dtJobData.Rows.IndexOf(CurrentRow) + 2).ToString + &quot;:D&quot; + (out_dtJobData.Rows.IndexOf(CurrentRow) + 2).ToString" Color="Red" />
+              </ui:If.Then>
+            </ui:If>
+          </ui:ForEachRow>
+          <ui:WriteRange DisplayName="Write Updated Data" SheetName="Sheet1" DataTable="out_dtJobData" StartCell="A1" />
+        </Sequence>
+      </ui:ExcelApplicationScope.Body>
+    </ui:ExcelApplicationScope>
+  </Sequence>
+</Activity>
